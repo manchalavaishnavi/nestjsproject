@@ -9,6 +9,8 @@ export class PostsService{
     async insertPost(post:PostsDto): Promise<string>{
         const newPost=new this.postModel(post)
         const result=await newPost.save()
+        console.log('hi')
+        console.log('hello')
         return result.id
     }
     async getposts(): Promise<Postinterface[]>{
